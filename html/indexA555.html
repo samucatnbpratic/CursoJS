@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--atributos das tag, neste caso lang=""-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--tag abaixo util para dispositivos moveis, renderizar a pagina-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Html 2</title>
+    <style> /*tag CSS para aplicar estilo na nossa pagina */
+        /*aqui estamos selecionando todas as tags h1*/
+        h1{
+            background: red;
+        }
+        p {
+            background: blue;
+        }
+        /*especifica um identificador para estilizar */
+        #cabecalho-dois{
+            background: purple;
+        }
+        .bold{
+            color: yellow;
+        }
+    
+        /*aqui estamos estilizando a classe
+         observe que ele não mudou o fundo do h1 que utilizamos o identificar
+         porque ele tem prioridade e somente u id poderia ser usado para sobrescrever.
+         */
+        .fundo-vermelho{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!--id atributo de tag, não pode ter o valor repetido na pagina
+        utilizar - entre identificação do nome é uma convenção muito usada.
+        class - também é um identificador, o nome dela pode repetir,e ter mais
+        de um atributo (muito usado para CSS e JavaScript)
+    -->
+    <h1 id="cabecalho-um" class="fundo-vermelho borda-esquerda"> HTML - Aula 555</h1>
+    <h1 id="cabecalho-dois" class="fundo-vermelho"> HTML - Aula 555</h1>
+    <P class="bold">
+        Um texto <b class="bold"> qualquer </b>
+    </P>
+    <P class="bold">
+        Um texto <b class="bold"> qualquer </b>
+    </P>
+</body>
+</html>
