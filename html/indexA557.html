@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Podemos definir o estilo CSS aqui no head-->
+    <style>
+        h1 {
+            background: purple;
+        }
+
+        .img-in-text {
+            width: 50px;
+            height: 44px;
+
+        }
+
+        /*O em é uma unidade muito útil em CSS, pois adapta automaticamente 
+        seu comprimento em relação à fonte que o leitor escolher usar.*/
+        .vermelho-destaque {
+            font-size: 1.5em;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--toda tag html pode receber um style ou seja um CSS-->
+    <h1 style="background: red;">Cabeçalho</h1>
+    <h1 style="background: blue;">Cabeçalho</h1>
+    <h1>Cabeçalho</h1>
+    <!--no caso da tag <p> observe que o texto ocupa 
+        somente seu espaço, ou seja é fluído o que 
+        chamamos de inline, dentro dele não é possível colocar um bloco.
+    -->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde eum, commodi, magni sequi doloremque ducimus hic
+        omnis ipsam esse voluptates ea deserunt cum expedita est id provident pariatur dicta! Illum.</p>
+
+    <!--vamos ver a diferença da tag <b> e <strong> ambas colocam o texto em negrido
+        tag <b> - simplesmente coloca o texto em negrito
+        tag <strong> - obedece uma semantica, suponha que você quer dar 
+            enfase a uma palavra ou frase, e seu texto será reproduzido um audio
+            para um deficiente, o navegador irá dar enfase nessas palavaras.
+
+        SEMELHANTEMENTE as tags <i> e <em> tem o mesmo sentido
+            <i> - coloca texto em negrito
+            <em> - da enfase para um leitor de texto, na busca do navegador.
+    -->
+    <p><b>Lorem</b> <strong>ipsum</strong> <i>dolor</i> <em>sit</em>, amet consectetur adipisicing elit. Unde eum,
+        commodi, magni sequi
+        doloremque ducimus hic omnis ipsam esse voluptates ea deserunt cum expedita est id provident pariatur dicta!
+        Illum.</p>
+
+    <!-- agora podemos utilizar tb link no nosso texto-->
+    <p>
+        <!--observe que podemos referenciar um link, e definir a forma que será aberto
+                com a target, no exemplo abaixo abre uma nova pagina
+            -->
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong" target="_blank">
+            amet
+
+            <!--src = local onde está nossa imagem
+                alt = texto alternativo da nossa imagem   
+                width = largura imagem 
+                height - altura da imagem
+                
+                OBS: fechamento a tag </a> após a imagem com isso ao clicar na imagem
+                somos direcionados para link definido acima.
+            -->
+            <img src="	https://seeklogo.com/images/M/mdn-logo-6DB9B0093F-seeklogo.com.png" alt="Logo da MDN" width="50"
+                height="44">
+        </a>
+
+        <!--SEGUNDA FORMA DE COLOCARMOS ATRIBUTOS NA NOSSA IMAGEM É UTILIZAR
+            TAG <style> CSS
+
+                neste caso definimos uma classe para nossa img
+         -->
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong" target="_blank">
+            amet
+
+            <img class="img-in-text" src="	https://seeklogo.com/images/M/mdn-logo-6DB9B0093F-seeklogo.com.png"
+                alt="Logo da MDN"> </a>
+
+        consectetur adipisicing elit. Unde eum, commodi, magni sequi
+        doloremque ducimus hic omnis ipsam esse voluptates ea deserunt cum expedita est id provident pariatur dicta!
+        Illum.
+    </p>
+
+    <!--exemplo abaixo vamos fazer a correção de texto, onde em vez de 
+        excluir a palavra usamos as seguintes tags, semanticamente corretas:
+        <del> - para dizer que estamos excluindo uma palavra ou texto
+        <ins> - para inserir novo texto no lugar no que foi excluído
+
+        tags fisicas para apenas riscar ou inserir underline no texto
+        <s> -risca a palavra
+        <u> - inseri um underline
+    -->
+    <p>Lorem da cor <del>vermelho</del> <ins>azul</ins> ipsum dolor sit, amet consectetur adipisicing elit. Unde eum,
+        commodi, magni sequi doloremque ducimus hic
+        <s>riscado</s> <u>underline</u> omnis ipsam esse voluptates ea deserunt cum expedita est id provident pariatur
+        dicta! Illum.
+    </p>
+
+    <hr>
+    <!--tag faz um separação horizontal, pasando uma linha, tag não tem corpo-->
+    <!-- outras tags uteis em texto, lembrando que tudo display: inline-->
+    <p>
+        <small>deixa a letra menor</small><br>
+
+        2<sup>4</sup> um numero elevado a outro<br>
+
+        H<sub>2</sub>O um numero embutido, geralmente para formulas dentro outros<br>
+
+        <q>tag de Citação - citando alguma coisa que alguma outra pessoa falou</q><br><br>
+        <!--abaixo uma segunda forma de fazer isso-->
+        <q cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong">
+            Tipicamente, estes elementos são renderizados por padrão, usando fontes em negrito. Contudo, ele não deve
+            ser usado para simplesmente aplicar o estilo negrito; use o CSS font-weight para este propósito.
+        </q><br><br>
+
+        <code>console.log("Olá mundo!")</code> identifica que é um código
+
+    </p>
+
+    <hr>
+    <h3>MOSTRAR UM BLOCO DE CODIGO FORMATADO </h3>
+    <pre>
+        if(soma==2)
+        {
+            soma = soma + 10;
+        }
+        eles{
+            soma = soma -1
+        }
+    </pre>
+    <hr>
+    <h3>EXEMPLO BLOCO CITAÇÃO utilizando tag cite</h3>
+    <blockquote cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong">
+        aqui estou fazendo um bloco de citação.
+    </blockquote>
+
+    <hr>
+    <h3>Tags span e div são containers genericos</h3>
+    <span>SPAN - é uma tag inline, não quebra o paragrafo</span>
+    <p> <span class="vermelho-destaque">Exemplo</span> da utilização da tag span</p>
+    <div>DIV - é um display block, ja quebra o texto se utilizado em um paragrafo.</div>
+</body>
+
+</html>

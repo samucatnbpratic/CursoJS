@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*removo espaço de todos os elementos que por padrão venham com espaço.*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #heading {
+           background: rgba(0,0,0, 0.7)
+        }
+
+        #heading div {
+            width: 90%;
+            /*background: #e50914;*/
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        #heading .h1 {
+            padding: 15px 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        #heading a {
+            color: #fff;
+            text-decoration: none;
+            /*remove linha abaixo da palavra*/
+            font-family: sans-serif;
+        }
+        body {
+            background: url(
+                https://assets.nflxext.com/ffe/siteui/vlv3/c16cf196-e89e-4c46-8cc7-f2eca6fb0762/335b87f0-7e66-40e7-9db4-9775d42542de/BR-pt-20220103-popsignuptwoweeks-perspective_alpha_website_medium.jpg
+            ); opacity: 0.5;
+            background-size: cover;
+            background-position: top center;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="heading">
+        <div> 
+            <h1 class="h1">
+                <a href="#">Netflix</a>
+            </h1>
+            <h2 class="h1">
+                <a href="#">Netflix</a>
+            </h2>
+        </div>
+    </header>
+</body>
+
+</html>
