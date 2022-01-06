@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            /*atributo une as bordas da tabela*/
+            width: 800px;
+            /*atributo faz table ocupar 100% da tela*/
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table caption {
+            caption-side: top;
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: x-large;
+        }
+
+        tfoot td,
+        table th {
+            background: rgb(138, 138, 138);
+        }
+
+        tfoot {
+            font-style: italic;
+        }
+        /*dica muito legal: neste exemplo criamos uma tabela e caso ela estoure
+        o espaço da tela, ex: um celular, uma barra de rolagem será criada somente
+        para tabela no eixo-x para conseguir visualizar toda tabela. */
+        .responsive-table{
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Aprendendo como utilizar tabelas</h1>
+    <div class="responsive-table">
+
+        <table>
+            <caption>Título ou descrição tabela</caption>
+            <!--cabeçalho da tabela-->
+            <thead>
+                <!--uma linha da tabela-->
+                <tr>
+                    <!--colunas na tabela-->
+                    <th>Titulo 1</th>
+                    <th>Titulo 2</th>
+                    <th>Titulo 3</th>
+
+                </tr>
+            </thead>
+            <!--corpo da tabela-->
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <!--exemplo de como fazer uma coluna ocupar o espaço de duas ou mais
+                o mesmo podemos fazer com linhas rowspan="2"
+                -->
+                    <td colspan="2">Corpo 1</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+            </tbody>
+            <!--rodape da tabela, por exemplo um totalizador da coluna-->
+            <tfoot>
+                <tr>
+                    <!--exemplo de como fazer uma coluna ocupar o espaço de duas ou mais
+                o mesmo podemos fazer com linhas rowspan="2"
+                -->
+                    <td colspan="2" rowspan="2"></td>
+                    <td>Total</td>
+                </tr>
+                <tr>
+                    <td>555,63</td>
+
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</body>
+
+</html>
