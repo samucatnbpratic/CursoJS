@@ -1,0 +1,192 @@
+<!--AULAS 564 A 567-->
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset=" UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  label {
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+  <form action="#" method="get" target="_blank" autocomplete="off">
+    <p>O meu formulario</p>
+    <p>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" class="type" name="nome" placeholder="Seu nome">
+    </p>
+    <p>
+      <!--campo fica desabilitado-->
+      <input type="text" id="nome1" class="type" name="nome1" placeholder="Seu nome 1" disabled>
+    </p>
+    <p>
+      <!--campo fica acessivel mas não aceita alteração-->
+      <input type="text" id="nome2" class="type" name="nome2" placeholder="Seu nome 2" readonly>
+    </p>
+
+    <p>USANDO CHECKBOX</p>
+    <p>
+      <label for="dev">Sou um dev</label>
+      <input type="checkbox" id="dev" class="type" name="dev" value="sim" checked>
+    </p>
+    <p>
+      <label for="dev2">Sou um dev</label>
+      <input type="checkbox" id="dev2" class="type" name="dev2" value="sim" checked>
+    </p>
+    <p>
+      <label for="dev3">Sou um dev</label>
+      <input type="checkbox" id="dev3" class="type" name="dev3" value="sim" checked>
+    </p>
+
+    <!--no uso deste tipo de elemento nós precisams: 
+      deixar o atributo name de todos iguais (ao selecionar um outros perdem a selecao)
+
+    -->
+    <p>USANDO RADIO</p>
+    <p>
+      <label for="radio1">Feminino</label>
+      <input type="radio" id="radio1" name="genero" value="feminino" checked>
+    </p>
+    <p>
+      <label for="radio2">Masculino</label>
+      <input type="radio" id="radio2" name="genero" value="masculino">
+    </p>
+    <p>
+      <label for="radio3">Outro</label>
+      <input type="radio" id="radio3" name="genero" value="outro">
+    </p>
+
+    <p>USANDO DATETIME</p>
+    <p>
+      <label for="date">Data</label>
+      <input type="date" id="date" name="date" value="2022-01-06">
+    </p>
+    <p>
+      <label for="datetime">Data/Hora</label>
+      <input type="datetime-local" id="datetime" name="datetime" value="2022-01-06T15:00">
+    </p>
+
+    <p>USANDO TIME</p>
+    <p>
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" value="15:11:35">
+    </p>
+
+    <p>USANDO INPUT COR</p>
+    <p>
+      <label for="color">Cor</label>
+      <input type="color" id="color" name="color" value="#ff0000">
+    </p>
+
+    <p>USANDO INPUT EMAIL</p>
+    <p>
+      <label for="email">Seu email</label>
+      <input type="email" id="email" name="email" placeholder="ex.: email@email.com">
+    </p>
+
+    <p>USANDO INPUT FILE (ARQUIVO)</p>
+    <!--accept = permite filtar tipos de arquivos que podemos selecionar
+     podemos usar .png como image/* (qualquer tipo de image)
+    multipe - permite selecionar mais de um arquivo.
+    -->
+    <p>
+      <label for="file">Seu email</label>
+      <input type="file" id="file" name="file" accept=".png,.svg,image/*" multiple>
+    </p>
+
+    <p>USANDO INPUT NUMBER</p>
+    <p>
+      <label for="number">Número</label>
+      <input type="number" id="number" name="number" placeholder="ex.: 123456" min="10" max="100" step="5">
+    </p>
+
+    <p>USANDO INPUT PASSWORD</p>
+    <p>
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" placeholder="digite sua senha" min="10" max="100" step="5">
+    </p>
+
+    <p>USANDO INPUT RANGE (barra tipo volume)</p>
+    <p>
+      <label for="range">Range</label>
+      <input type="range" id="range" name="range" list="tickmarks">
+      <datalist id="tickmarks">
+        <option value="0" label="0%"></option>
+        <option value="10"></option>
+        <option value="20"></option>
+        <option value="30"></option>
+        <option value="40"></option>
+        <option value="50" label="50%"></option>
+        <option value="60"></option>
+        <option value="70"></option>
+        <option value="80"></option>
+        <option value="90"></option>
+        <option value="100" label="100%"></option>
+      </datalist>
+    </p>
+
+    <p>USANDO INPUT URL</p>
+    <p>
+      <label for="url">Url</label>
+      <input type="url" id="url" name="url" placeholder="digite sua url">
+    </p>
+
+    <p>USANDO INPUT SEARCH</p>
+    <p>
+      <label for="search">Busca</label>
+      <input type="search" id="search" name="search" placeholder="digite sua pesquisa">
+    </p>
+
+    <p>USANDO SELECT LISTA DE OPCOES</p>
+    <!--observações importantes opcionais
+          tag optgroup - podemos agrupar nossas opções da lista
+          atributo disabled - desativa uma item da lita
+          atributo selected - Ja inicia com  item selecionado
+          atributo multiple - permite selecionar varios itens da lista
+    -->
+    <p>
+      <label for="select">Selecione alguma coisa</label>
+      <select id="select" name="select" multiple>
+        <optgroup label="Grupo 1">
+          <option value="qualquer 1" label="Label 1"></option>
+          <option value="qualquer 2" label="Label 2" disabled></option>
+          <option value="qualquer 3" label="Label 3" selected></option>
+          <option value="qualquer 4" label="Label 4"></option>
+        </optgroup>
+        <optgroup label="Grupo 2">
+          <option value="retorna 1" label="Opcional 1"></option>
+          <option value="retorna 2" label="Opcional 2"></option>
+          <option value="retorna 3" label="Opcional 3"></option>
+          <option value="retorna 4" label="Opcional 4"></option>
+        </optgroup>
+      </select>
+    </p>
+
+    <p>USANDO TAG TEXTAREA</p>
+    <p>
+      <label for="textarea">Text Area</label>
+      <textarea id="textarea" name="textarea"
+      rows="20">
+    </p>
+
+
+    <p>
+      <button type="reset">Reset</button>
+      <!--limpa os campos do form-->
+      <button type="submit">Submit</button>
+      <!--envia o form-->
+
+    </p>
+  </form>
+</body>
+
+</html>
