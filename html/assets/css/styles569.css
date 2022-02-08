@@ -1,0 +1,62 @@
+/*este seletor seleciona todos os elementos e aqui nós zeramos eles
+é interessante fazer isso*/
+* {
+         margin: 0;
+         padding: 0;
+     }
+     /*selecionando por tags*/
+     h1, p {
+         color: purple;
+     }
+
+     body div section p,
+     body div section h1{
+         color: red;
+     }
+     /*utilizando a class para estilizar*/
+     /*abaixo navegamos entre as classes e especificamos a tag h1 que devera ter a cor verde*/
+     .main-content .secao-green h1 {
+         color: green;
+
+     }
+     /*abaixo definimos que todas as classe color-red deverão ter cor azul*/
+     .color-red {
+         color: blue;
+     }
+
+     /*neste caso abaixo especificamos que o elemento h1 tem que ter a classe = "color-yelow"*/
+     .main-content .secao-green h1.color-yelow {
+        color: yellow;
+        background: black;
+
+    }
+
+    /*por padrão as div filhas são criadas como padrão para herdar propriedades da div pai
+      ex.: color = inherit (internamente ocorre isso)
+      para que a cor definida no pai não altere a div filha, então fazemos o seguinte
+    */
+    div{
+        color: initial;
+        margin-left: 20px;
+
+    }
+    /*seleção de dependentes algumas observações importantes:
+        1 - se tiver espaço, significa que é uma classe filha que está dentro do pai
+    */ 
+    .pai .filha {
+        color: blueviolet;
+    }
+
+    /*seleção de dependentes algumas observações importantes:
+        2 - se tiver junto, significa que a classe filha deve conter as duas coisas
+    */ 
+    .pai.filha2 {
+        color: green;
+    }
+
+        /*seleção de dependentes algumas observações importantes:
+        3 - usando seletor para atribuir estilo, é necessário que esteja exatamente na hierarquia passada.
+    */ 
+    .pai > .filha > .filha {
+        color: blueviolet;
+    }

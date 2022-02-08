@@ -1,4 +1,10 @@
-        .caixa{
+/*este seletor seleciona todos os elementos e aqui nós zeramos eles
+é interessante fazer isso*/
+* {
+         margin: 0;
+         padding: 0;
+     }
+     .caixa{
             background: red;
             height: 120px;
             width: 120px;
