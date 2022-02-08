@@ -1,0 +1,37 @@
+/*este seletor seleciona todos os elementos e aqui nós zeramos eles
+é interessante fazer isso*/
+* {
+         margin: 0;
+         padding: 0;
+     }
+
+/*seletores de irmãos
+Adjacent sibling combinator "+"
+    para um elemento que possui a classe pai, encontra um p que venha depois de um h1
+*/
+
+.pai h1+p {
+    color: red;
+}
+
+.pai p+h1 {
+    color: green;
+}
+
+/*depois de um h1 seleciona todos os p
+General sibling combinator "~"
+*/
+.pai h1~p {
+    color: green;
+}
+
+/*vamos selecionar por atributo */
+[meu-atributo]{
+    color: red;
+}
+
+/*apenas como exemplo utilizando atributo padrão do elemento porém não se faz assim*/
+[checked]{
+    width: 50px;
+    height: 50px;
+}
