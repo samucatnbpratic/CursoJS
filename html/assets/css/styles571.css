@@ -25,9 +25,30 @@ General sibling combinator "~"
     color: green;
 }
 
+
 /*vamos selecionar por atributo */
 [meu-atributo]{
     color: red;
+}
+
+/*vamos selecionar com base em parte do valor de um atributo, utilizando ~ */
+[meu-atributo~="valor1"]{
+    color: limegreen;
+}
+
+/*vamos alterar a cor se o atributo iniciar com um determinado valor, utilizando ^ */
+[meu-atributo^="qualquer"]{
+    color: blue;
+}
+
+/*vamos alterar a cor se o atributo terminar com um determinado valor, utilizando $ */
+[meu-atributo$="a"]{
+    color: brown;
+}
+
+/*vamos alterar a cor se o atributo contem um determinado valor, utilizando * */
+[meu-atributo*="quer-c"]{
+    color: chocolate;
 }
 
 /*apenas como exemplo utilizando atributo padrão do elemento porém não se faz assim*/
