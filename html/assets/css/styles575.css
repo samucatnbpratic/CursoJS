@@ -1,0 +1,28 @@
+/*seleciona o primeiro item da lista*/
+/*
+ul li:nth-child(1){
+    background: aqua;
+}
+*/
+
+/*seleciona os itens pares*/
+
+ul li:nth-child(even){
+    background: yellow;
+}
+
+
+/*seleciona os itens impares*/
+ul li:nth-child(odd){
+    background: yellowgreen;
+}
+
+/*seleciona a cada 3 itens da lista*/
+ul li:nth-child(3n){
+    background: darkmagenta;
+}
+
+/*a partir do 5 elemento, muda a cor a cada 3 elementos */
+ul li:nth-child(3n+5){
+    background: black;
+}
