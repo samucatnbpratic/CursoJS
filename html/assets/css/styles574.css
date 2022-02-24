@@ -1,0 +1,17 @@
+
+
+input:checked + p{
+    background: darkgoldenrod;
+}
+
+input:not(checked) + p{
+    background: darkgray;
+}
+
+p:not(.meio){
+    background: aquamarine;
+}
+
+input:required{
+    background: aqua;
+}
