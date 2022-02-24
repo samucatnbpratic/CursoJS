@@ -1,0 +1,36 @@
+/*adicionamos como se fosse um novo elemento após o conteudo do li*/
+ul li::after{
+    content: " - ";
+    background: aquamarine;
+}
+
+/*adicionamos como se fosse um novo elemento antes o conteudo do li*/
+ul li::before{
+    content: " * ";
+    display: block; /*fazendo isto quebramos a linha*/
+}
+p{
+    font-size: 24px;
+    text-align: justify;
+}
+p::first-letter{
+    font-size: 100px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+/*seleciona a primeira linha*/
+p::first-line{
+    background: chartreuse;
+}
+
+p::selection{
+    background: chocolate;
+}
+
+::placeholder{
+    color: darkseagreen;
+    background-color: darkblue;
+    font-size: 24px;
+}
