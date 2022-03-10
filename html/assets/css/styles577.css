@@ -1,0 +1,36 @@
+/*
+entendendo a Especificidade (vamos entender a ordem de prioridade que serão aplicados os estilos)
+1 - IDs
+2 - Classes
+3 - atributos
+4 - Pseudo-classes
+5 - Elementos
+6 - Pseudo-elementos
+
+vamos a pratica mostrar um exemplo:
+ID   | CLASSE   ATRIBUTOS   PSEUDO-CLASSES | ELEMENTOS  PSEUDO-ELEMENTOS
+1       0                                       0
+0       1                                       0
+
+OBSERVE  abaixo o primeiro seletor tem um valor maior, com isso o ultimo seletor não será aplicado
+*/
+
+/*1 - TESTE */
+/*aqui a especifidade = 1,0,0 ou seja valor = 100 */
+#p {
+    background-color: aqua;
+}
+/*aqui a especifidade = 0,1,0 ou seja valor = 010 */
+.p{
+    background-color: yellow;
+}
+/*aqui a especifidade = 1,0,1 ou seja valor = 101 */
+p#p{
+    background-color: red;
+}
+
+/*2 -TESTE*/
+/*vamos acrescentar mais um seletor agora com especifidade maior = 110 */
+#p.p{
+    background-color: greenyellow;
+}
