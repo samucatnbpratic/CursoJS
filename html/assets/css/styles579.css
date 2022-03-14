@@ -1,0 +1,65 @@
+/*1- TESTE UTILIZANDO INLINE*/
+.texto{
+    display: inline; /*se colocarmos inline abaixo as propriedades não são aplicadas*/
+    background: red;
+    width: 50%; /*vai ocupar 50% da largura do espaço */
+}
+
+/*2 - TESTE UTILIZANDO BLOCK, largura em percentual */
+.texto{
+    display: block;
+    background: red;
+    width: 50%; /*vai ocupar 50% da largura do espaço */
+}
+
+/*3 - TESTE UTILIZANDO largura/altura em pixels para testar situação em que nao cabe a cantidade de caracteres
+    dentro do espaço do display, então podemos usar OVERFLOW: HIDDEN */
+.texto{
+    display: block;
+    background: red;
+    width: 200px; /*vai ocupar 50% da largura do espaço */
+    height: 200px;
+    overflow: hidden; /*se passar pra fora da margem então fica o texto escondido*/
+}
+
+
+/*4 - TESTE UTILIZANDO largura/altura em pixels para testar situação em que nao cabe a cantidade de caracteres
+    dentro do espaço do display, então podemos usar OVERFLOW-Y: AUTO */
+    .texto{
+        display: block;
+        background: red;
+        width: 200px; /*vai ocupar 50% da largura do espaço */
+        height: 200px;
+        overflow-y: auto; /*se passar pra fora da margem então mostra o barra scrooll*/
+    }
+
+
+    /*5 - vamos definir largura e altura da div, e usar algumas propriedades  */
+    .texto{
+        background: red;
+        width: 100%; 
+        height: 100%;
+        max-width: 400px; /*defino que a largura maxima da div e´ 600 pixels*/
+        max-height: 500px;
+        min-width: 0;
+        min-height: 100px;
+        overflow-y: auto; /*se passar pra fora da margem então mostra o barra scrooll*/
+        margin: 0 auto; /*essa propriedade faz com que nossa div fique centralizada ao meio da tela */
+    }
+
+        /*5 - vamos definir largura e altura da div, e usar algumas propriedades  */
+        .texto{
+           /* box-sizing: content-box; /*acrescenta borda, margem, padding ao conteudo cresce para fora*/
+            box-sizing: border-box; /*aqui entra padding, border pra dentro, exceto a margem*/
+            background: red;
+            width: 100%; 
+            height: 100%;
+            max-width: 400px; /*defino que a largura maxima da div e´ 600 pixels*/
+            max-height: 500px;
+            min-width: 0;
+            min-height: 100px;
+            overflow: auto; /*se passar pra fora da margem então mostra o barra scrooll*/
+            margin: 0 auto 50px auto; /*definimos as margens do nosso conteudo */
+            padding: 50px;
+            border: 5px solid black;
+        }
