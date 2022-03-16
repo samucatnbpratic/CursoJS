@@ -1,0 +1,50 @@
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth; /*faz a pagina rolar suavemente */
+}
+
+.pai{
+    width: 30rem; /*medida relativa, que considerando percentual acima aqui daria 300px = 30 x 10 */
+    background: yellow;
+}
+
+p{
+    font-size: 1.6em; /*unidade relativa (aqui ele vai pegar com base na font-size do pai mais proximo a ele*/
+}
+
+
+/* 2- TESTE testando viewport vw */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.pai{
+    width: 100vw;  /* neste caso estamos dizendo que terá 100 da largura da area de visualização*/
+    width: 50vw;  /* ocupa 50% da largura do view port*/
+    height: 100vh; /*aqui ele obedece proporcional ao height */
+    overflow: hidden;
+}
+
+/* aqui estamos definido especificamente a div dentro da nossa div pai, 
+   os tamanhos definidos é com base no tamanho da div pai, e não da area do view port
+*/
+.pai > div {
+    width: 50%;
+    height: 50rem;
+    background: blue;
+}
+
+.color-one{
+    background: turquoise;
+}
+
+.color-two{
+    background: purple;
+}
+/*aplicando unidade relativa vmax */
+p{
+    font-size: 2vmax; 
+}
