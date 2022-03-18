@@ -72,7 +72,15 @@ html {
     background: red;
     background: #f00;  /*CORES EM HEXADECIMAL: ABCDEF0123456789*/
     background: rgb(255, 0, 0);  /*CORES EM RGB: */
-    background: rgba(255, 10, 10, 5%);  /*CORES EM RGBA: podendo usar opacidade */
+    background: rgba(255, 10, 10, 35%);  /*CORES EM RGBA: podendo usar opacidade */
+    border-top-left-radius: 150px; /*especificamente no canto superior esquerdo*/
+    border-radius: 50%; /*se quisessemos criar um elemento redondo, bastava colocar assim, porém o elemento deve ser quadrado para funcionar.*/
+    border-radius: 15px 15px 15px 15px;  /*aqui um atalho para trabalhar de todos os lados*/
+    box-shadow: 5px 5px 0 0 blue; /*efeito de sombra, podemos usar valores negativos tambem*/
+    box-shadow: 0 0 1em 0 blue; /* esse terceiro elemento, efeito blur*/
+    box-shadow: 0 0 0 5px blue; /* esse terceiro elemento, efeito spread (espalhamento)*/
+    box-shadow: inset 0 0 1em gold, 0 0 1em red; /*podemos mesclar efeitos*/
+    box-shadow: 3px 3px darkmagenta, -1em 0 0.4em darkred; /*mais formas de usar */
 }
 
 .about{
