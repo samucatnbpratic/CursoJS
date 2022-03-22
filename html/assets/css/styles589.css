@@ -5,7 +5,7 @@
 }
 
 .flex-container{
-    display: flex;
+    display: flex; 
     flex-direction: row; /*defini o eixo principal se é na vertical ou na horizontal*/
     /*flex-direction: column; /*podemos usar eixo na vertical tb,usando column*/
    /* flex-direction: column-reverse; /*podemos usar eixo na vertical tb,usando column*/
@@ -30,7 +30,7 @@
 }
 
 .flex-item{
-    width: 33.33%;
+    width: 100%;
     background: red;
     margin: 10px;
 }

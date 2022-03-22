@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex; 
+    justify-content: space-between;
+    flex-flow: row wrap; /*esse é um atalho para flex-direction e flex-wrap*/
+    background: yellow;
+}
+
+.flex-item{
+    /*flex-grow: 1; /*permiti que ele distruba os espações entre os elementos*/
+    /*flex-basis: 320px; /*da o um tamanho ao elemento antes de distribuir o espaço*/
+    /*flex-shrink: 0; /* permiti diminuir o elemento*/
+    flex: 1 1 320px; /*esse é um atalho para os comandos acima*/
+    height: 200px;
+    color: #FFF;
+    background: red;
+}
+
+.flex-item:nth-child(2){
+    flex: 2 1 320px; /*esse é um atalho para os comandos acima*/
+    height: 200px;
+    color: #FFF;
+    background: darkmagenta;
+}
