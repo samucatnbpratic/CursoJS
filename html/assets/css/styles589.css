@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row; /*defini o eixo principal se é na vertical ou na horizontal*/
+    /*flex-direction: column; /*podemos usar eixo na vertical tb,usando column*/
+   /* flex-direction: column-reverse; /*podemos usar eixo na vertical tb,usando column*/
+
+   /* justify-content: flex-start; /*alinha os itens no inicio do eixo principal*/
+   /* justify-content: flex-end; /*alinha os itens no final do eixo principal*/
+   /* justify-content: space-around; /*é útil pois ele distribui todos os elementos igualmente pelo eixo principal, com um pouquinho de espaço no final.*/
+   /* justify-content: space-between; /* o qual é muito similar ao space-around, exceto que ele não deixa nenhum espaço no final.*/
+   /* justify-content: space-evenly; /*alinha os itens no inicio do eixo principal*/
+    justify-content: center; /*alinha os itens no centro do eixo principal*/
+    align-items: flex-start; /*alinha os elementos no inicio*/
+    align-items: flex-end;  /*alinha os elementos no final*/
+    align-items: center; /*centraliza os elementos*/
+    align-items: baseline; /*alinha com base no texto*/
+    align-items: stretch; /*estica os elementos com base no eixo principal(dependendo se tiver row ou column)*/
+    background: yellow;
+    height: 500px;
+    width: 800px;
+    gap: 30px;
+}
+
+.flex-item{
+    width: 100%;
+    background: red;
+    margin: 10px;
+}
+
+.flex-item:nth-child(3){
+    font-size: 40px;
+}
