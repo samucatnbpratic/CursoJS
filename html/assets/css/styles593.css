@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 24px;
+}
+
+.grid{
+    max-width: 800;
+    margin: 5%;
+    display: grid;
+    /*grid-template-columns: 200px 1fr 2fr; /*defini as colunas da grid, podemos usar px, %, fr (fragmento)*/
+    /*grid-template-columns: repeat(5, 1fr); /*defini as colunas da grid, podemos usar px, %, fr (fragmento)*/
+    /*aqui podemos definir qtde automatica de colunas sendo que o tamanho minimo é 320px */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    /*abaixo outra forma de criar as colunas com tamanhos diferentes*/
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-rows: 2fr 1fr 3fr;*/
+    gap: 30px;
+}
+
+.grid div{
+    background: tomato;
+    min-height: 100px;
+}
+
+.grid div:nth-child(5),
+.grid div:nth-child(7){
+  grid-column-start: 1;  
+  grid-column-end: 4;
+  grid-row-start: 3; /*a uma sobreposição das camadas, pois as duas linhas ficam posicionadas na linha 3*/
+  background: darkkhaki;
+}
+/*podemos então controlar a visualização das camadas com z-index*/
+.grid div:nth-child(5){
+    background: darkorange;
+    z-index: 2;
+}
+
+.grid div:nth-child(7){
+    z-index: 3;
+}
+
+/*podemos usar o span para definir quantas linhas nossa coluna ocupa*/
+.grid div:nth-child(5){
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+@media(max-width: 768px){
+    .grid div:nth-child(5){
+    grid-column: span 1;
+    }
+
+}
